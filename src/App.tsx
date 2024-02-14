@@ -1,9 +1,8 @@
-import './Global.css'
+import "./Global.css";
+import { Header } from "./components/Header.tsx";
 
 function App() {
-  return (
-    <p>Todo List</p>
-  )
+  return <Header />;
 }
 
-export default App
+export default App;
