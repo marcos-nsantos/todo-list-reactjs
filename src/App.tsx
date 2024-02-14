@@ -1,13 +1,13 @@
 import "./Global.css";
 import styles from "./App.module.css";
 import { Header } from "./components/Header.tsx";
-import { Input } from "./components/Input.tsx";
+import { Form } from "./components/Form.tsx";
 
 function App() {
   return (
     <div className={styles.content}>
       <Header />
-      <Input />
+      <Form />
     </div>
   );
 }
