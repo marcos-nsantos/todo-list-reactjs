@@ -1,0 +1,15 @@
+.button {
+    height: 3.375rem;
+    padding: 1rem;
+
+    background-color: var(--blue-dark);
+    color: var(--gray-100);
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--blue);
+}
