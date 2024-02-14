@@ -1,4 +1,10 @@
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.5rem;
+
     height: 3.375rem;
     padding: 1rem;
 
@@ -8,6 +14,12 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+
+    line-height: 140%;
+    font-size: 0.875rem;
+    font-weight: bold;
+
+    transition: 0.1s;
 }
 
 .button:hover {
