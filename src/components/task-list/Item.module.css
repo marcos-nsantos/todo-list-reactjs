@@ -39,3 +39,7 @@
 .item button:hover line, .item button:hover path {
     fill: var(--danger);
 }
+
+.text-line-through {
+    text-decoration: line-through;
+}
