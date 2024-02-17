@@ -5,10 +5,12 @@ import { Form } from "./components/Form.tsx";
 
 function App() {
   return (
-    <div className={styles.content}>
+    <>
       <Header />
-      <Form />
-    </div>
+      <div className={styles.content}>
+        <Form />
+      </div>
+    </>
   );
 }
 
