@@ -4,7 +4,7 @@ import { Button } from "./Button.tsx";
 
 export const Form = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.formGroup}>
       <Input />
       <Button />
     </div>
