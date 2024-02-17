@@ -1,0 +1,41 @@
+.item {
+    display: flex;
+    flex: 1;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem;
+    border-radius: 8px;
+
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-400);
+}
+
+.item div {
+    display: flex;
+    gap: 0.948rem;
+}
+
+.item label {
+    display: flex;
+    padding: 3px;
+    align-items: center;
+}
+
+.item label input[type="checkbox"] {
+    display: none;
+}
+
+.item button {
+    border: none;
+    background-color: transparent;
+}
+
+.item button:hover {
+    background-color: var(--gray-400);
+}
+
+.item button:hover line, .item button:hover path {
+    fill: var(--danger);
+}
