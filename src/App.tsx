@@ -58,7 +58,10 @@ function App() {
 
       <main className={styles.content}>
         <Form onCreateTask={handleAddNewTask} />
-        <TaskListCounts />
+        <TaskListCounts
+          todoQuantity={incompletedTasks.length}
+          doneQuantity={completedTasks.length}
+        />
         <div className={styles.listGroup}>{renderTasks()}</div>
       </main>
     </>

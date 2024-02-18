@@ -1,16 +1,26 @@
 import styles from "./TaskListCounts.module.css";
 
-export function TaskListCounts() {
+interface TaskCountsProps {
+  todoQuantity: number;
+  doneQuantity: number;
+}
+
+export function TaskListCounts({
+  todoQuantity,
+  doneQuantity,
+}: TaskCountsProps) {
   return (
     <div className={styles.taskCounts}>
       <aside>
         <p>Tarefas criadas</p>
-        <span>5</span>
+        <span>{todoQuantity}</span>
       </aside>
 
       <aside>
         <p>Concluídas</p>
-        <span>2</span>
+        <span>
+          {doneQuantity} de {todoQuantity + doneQuantity}
+        </span>
       </aside>
     </div>
   );
