@@ -1,26 +1,43 @@
 import styles from "./Item.module.css";
 import { CheckCircle, Circle, Trash } from "@phosphor-icons/react";
-import { useState } from "react";
 
-export function Item() {
-  const [isDone, setIsDone] = useState(false);
+export interface ITaskItem {
+  id: number;
+  text: string;
+  status: boolean;
+}
 
+export interface ITaskItemProp {
+  props: ITaskItem;
+  onChangeStatus: (id: number, status: boolean) => void;
+  onDeleteTask: (id: number) => void;
+}
+
+export function TaskItem({
+  props,
+  onChangeStatus,
+  onDeleteTask,
+}: ITaskItemProp) {
   function handleChangeTaskStatus() {
-    setIsDone(!isDone);
+    onChangeStatus(props.id, !props.status);
+  }
+
+  function handleDeleteTask() {
+    onDeleteTask(props.id);
   }
 
   function renderIcon() {
-    if (!isDone) {
+    if (!props.status) {
       return <Circle size={18} weight="bold" color="#4ea8d3" />;
     }
     return <CheckCircle size={18} weight="fill" color="#5e60ce" />;
   }
 
-  function renderText(text: string) {
-    const textClassName = isDone
+  function renderText() {
+    const textClassName = props.status
       ? `${styles.paragraph} ${styles["text-line-through"]}`
       : styles.paragraph;
-    return <p className={textClassName}>{text}</p>;
+    return <p className={textClassName}>{props.text}</p>;
   }
 
   return (
@@ -33,10 +50,12 @@ export function Item() {
           </span>
         </label>
 
-        {renderText("Terminar esse projeto")}
+        {renderText()}
       </div>
 
-      <button>{<Trash size={16} color="#808080" />}</button>
+      <button onClick={handleDeleteTask}>
+        {<Trash size={16} color="#808080" />}
+      </button>
     </div>
   );
 }
