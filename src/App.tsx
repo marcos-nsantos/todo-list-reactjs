@@ -57,7 +57,7 @@ function App() {
       <Header />
 
       <main className={styles.content}>
-        <Form />
+        <Form onCreateTask={handleAddNewTask} />
         <TaskListCounts />
         <div className={styles.listGroup}>{renderTasks()}</div>
       </main>
