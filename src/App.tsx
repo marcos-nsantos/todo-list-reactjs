@@ -8,6 +8,7 @@ import {
   ITaskItemProp,
   TaskItem,
 } from "./components/task-list/TaskItem.tsx";
+import { EmptyList } from "./components/task-list/EmptyList.tsx";
 import { TaskListCounts } from "./components/task-list/TaskListCounts.tsx";
 
 function App() {
@@ -62,7 +63,9 @@ function App() {
           todoQuantity={incompletedTasks.length}
           doneQuantity={completedTasks.length}
         />
-        <div className={styles.listGroup}>{renderTasks()}</div>
+        <div className={styles.listGroup}>
+          {allTasks.length > 0 ? renderTasks() : <EmptyList />}
+        </div>
       </main>
     </>
   );
