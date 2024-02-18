@@ -7,3 +7,51 @@
 .formGroup input, .formGroup button {
     transform: translateY(-50%);
 }
+
+.input {
+    height: 3.375rem;
+    width: 100%;
+    padding: 1rem;
+
+    background-color: var(--gray-500);
+    color: var(--gray-100);
+
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+}
+
+.input::placeholder {
+    color: var(--gray-300)
+}
+
+.input:focus {
+    border-color: var(--purple-dark);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    height: 3.375rem;
+    padding: 1rem;
+
+    background-color: var(--blue-dark);
+    color: var(--gray-100);
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    line-height: 140%;
+    font-size: 0.875rem;
+    font-weight: bold;
+
+    transition: 0.1s;
+}
+
+.button:hover {
+    background-color: var(--blue);
+}
