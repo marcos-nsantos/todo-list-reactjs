@@ -12,6 +12,7 @@ export const Form = ({ onCreateTask }: IFormProps) => {
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
     onCreateTask(taskText);
+    setTaskText("");
   }
 
   function handleNewTaskOnChange(event: ChangeEvent<HTMLInputElement>) {
